@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/homePageStyles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/starsStyle.css' %}" rel="stylesheet" />
+
+    <!-- Boostrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<div class="stars" style="height: 1.5px; width: 1.5px"> </div>
+<!-- NavBar & Buttons -->
+    <div class="control-panel" style="margin-right: 0; height: 75px; align-content: center;">
+        <button class="control-button"  onclick="window.location.href='{% url 'Main:Home' %}'" style="margin-left: 10px; z-index: 1">Home</button>
+        <button class="control-button-selected" >About</button>
+        <button class="control-button scroll-down-one-window" onclick="window.location.href='{% url 'Main:skills' %}'" >Skills</button>
+        <h1 style="margin-top: 15px; display: flex; color: white; margin-left: 10px; font-size: 30px">
+            <i class="bi bi-geo-alt-fill" style="color: white; vertical-align: middle;"></i> Kyiv
+        </h1>
+        <button class="control-button" style="margin-left: 30px" onclick="window.location.href='{% url 'Main:resume' %}'">Resume</button>
+
+        <button class="control-button" style="margin-right: 10px" onclick="window.location.href='{% url 'Main:contact' %}'">Contact</button>
+    </div>
+
+    <div style="width: 95%; height: 500px;  background-color: rgba(0,0,0,0.18); border-radius: 20px; display: flex; flex-direction: column; margin: 20px auto;">>
+        <h1 class="bloom-text-orange-animated" style="font-size: 60px; margin-left: 20px">
+            About
+        </h1>
+
+        <div style="display: flex; flex-direction: row">
+            <h1 style="font-size: 30px; margin-left: 20px; color: white">
+                This website was developed using Python (Django) for the backend logic and JavaScript, HTML, and CSS for the frontend.
+                It is a fully self-developed project that showcases my ability to create modern web applications with interactive interfaces,
+                responsive design, and well-structured code.
+            </h1>
+        </div>
+
+         <div style="display: flex; flex-direction: row; margin-top: 20px">
+            <h1 style="font-size: 30px; margin-left: 20px; color: white">
+                A link to the <a href="https://github.com/OleksandrVozhdai/CVSite-Django" target="_blank">GitHub repository </a>is provided, where the full source code is available for review,
+                offering insight into the application's functionality and architecture.
+            </h1>
+         </div>
+
+        <div style="display: flex; flex-direction: row; margin-top: 20px">
+            <h1 style="font-size: 30px; margin-left: 20px; color: white">
+               The primary purpose of this site is to demonstrate my practical skills in web development and to serve as a professional
+                portfolio aimed at securing employment in the field of software engineering.
+                I have aimed to combine a user-friendly interface, technical quality, and well-organized content to highlight my attention
+                to detail and my ability to work across both frontend and backend development.
+            </h1>
+         </div>
+
+    </div>
+
+
+    <!-- end -->
+    <div style="width: 95%; height: 100%; background-color: rgba(0,0,0,0.18); border-radius: 20px; margin-bottom: 20px; display: flex; flex-direction: row; margin-left: auto; margin-right: auto">
+
+    <h1 style="color: rgba(255,255,255,0.45); margin-left: 20px; margin-top: 40px"> My job profiles <i class="bi bi-arrow-bar-right"></i></h1>
+         <a href="" target="_blank">
+             <div class="image-container animate-icons" style="background-image: url('{% static "assets/djIcon.jpg" %}'); margin-bottom: 0 ; height: 70px; width: 70px; margin-left: 20px; "></div>
+         </a>
+          <a href="" target="_blank">
+             <div class="image-container animate-icons" style="background-image: url('{% static "assets/ruaIcon.png" %}'); margin-bottom: 0 ; height: 70px; width: 70px; margin-left: 20px; "></div>
+         </a>
+    </div>
+</body>
+</html>

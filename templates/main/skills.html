@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/homePageStyles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/starsStyle.css' %}" rel="stylesheet" />
+
+    <!-- Boostrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<div class="stars" style="height: 1.5px; width: 1.5px"> </div>
+<!-- NavBar & Buttons -->
+    <div class="control-panel" style="margin-right: 0; height: 75px; align-content: center;">
+        <button class="control-button"  onclick="window.location.href='{% url 'Main:Home' %}'" style="margin-left: 10px; z-index: 1">Home</button>
+        <button class="control-button"  onclick="window.location.href='{% url 'Main:about' %}'" >About</button>
+        <button class="control-button-selected"  >Skills</button>
+        <h1 style="margin-top: 15px; display: flex; color: white; margin-left: 10px; font-size: 30px">
+            <i class="bi bi-geo-alt-fill" style="color: white; vertical-align: middle;"></i> Kyiv
+        </h1>
+        <button class="control-button" style="margin-left: 30px" onclick="window.location.href='{% url 'Main:resume' %}'">Resume</button>
+
+        <button class="control-button" style="margin-right: 10px"  onclick="window.location.href='{% url 'Main:contact' %}'">Contact</button>
+    </div>
+
+
+ <div class="skills-container" style="height: 500px; margin-top: 100px">
+        <div>
+            <h1 style="margin-top: 60px; margin-left: 60px; color: white; font-size: 80px;">My</h1>
+            <h1 class="bloom-text-orange" style="margin-left: 60px; margin-right: 50px; font-size: 100px;">Skills</h1>
+            <h1> <i class="bi bi-caret-right-fill bloom-text-yellow" style="color: #FFD700FF; font-size: 100px; margin-left:180px"></i></h1>
+        </div>
+
+        <!-- C# & .NET-->
+        <div class = "skills-item">
+            <div>
+               <div class="image-container" style="background-image: url('{% static "assets/csIcon.png" %}'); height: 160px; width: 260px;"></div>
+               <div class="image-container" style="background-image: url('{% static "assets/dotnetIcon.png" %}'); height: 160px; width: 260px;"></div>
+               <h1 class="text-overlay" style="color: white; margin-bottom: 400px; margin-left:380px; font-weight: bold "> С# and .NET </h1>
+               <h1 class="text-overlay" style="color: white; font-size: 18px; margin-bottom: 240px; margin-left:380px"> Possess a solid understanding of C#,<br> object-oriented programming (OOP), SOLID <br>principles, and design patterns.
+               Used .NET <br>and LINQ in personal and academic projects. <br>Developed desktop applications using WPF <br> and worked with the ASP MVC architectural <br>pattern.</h1>
+              <button onclick="window.location.href='{% url 'Main:csProjects' %}'" class="text-overlay skills-button" style="margin-bottom: 130px; margin-left:450px;">My C# projects</button>
+            </div>
+       </div>
+       <!-- Python & Django -->
+       <div class = "skills-item">
+             <div>
+               <div class="image-container" style="background-image: url('{% static "assets/pythonIcon.png" %}'); height: 160px; width: 260px;"></div>
+               <div class="image-container" style="background-image: url('{% static "assets/djangoIcon.png" %}'); height: 160px; width: 260px;"></div>
+               <h1 class="text-overlay" style="color: white; margin-bottom: 400px; margin-left:380px; font-weight: bold"> Python and Django </h1>
+               <h1 class="text-overlay" style="color: white; font-size: 18px; margin-bottom: 240px; margin-left:380px"> Familiar with the fundamentals of the  <br>Python programming language, which I <br>used during academic projects.
+                     Have <br>experience using the Django framework, <br>connecting applications to databases, and <br>creating and deploying websites during <br> academic projects.
+               </h1>
+               <button onclick="window.location.href='{% url 'Main:pthProjects' %}'" class="text-overlay skills-button" style="margin-bottom: 130px; margin-left:450px"> My Python projects </button>
+            </div>
+       </div>
+       <div class = "skills-item">
+           <div>
+               <div class="image-container" style="background-image: url('{% static "assets/htmlIcon.png" %}'); height: 160px; width: 260px;"></div>
+               <div class="image-container" style="background-image: url('{% static "assets/cssIcon.png" %}'); height: 160px; width: 260px;"></div>
+               <h1 class="text-overlay" style="color: white; margin-bottom: 400px; margin-left:380px; font-weight: bold"> HTML and CSS </h1>
+               <h1 class="text-overlay" style="color: white; font-size: 18px; margin-bottom: 240px; margin-left:380px"> Have a basic understanding of HTML and <br> CSS, used for building user interfaces in <br> web applications.
+                   Applied these <br>technologies in academic projects alongside <br> .NET and Django. Familiar with responsive <br>design principles and the basics of front-end <br> web development.
+               </h1>
+              <button onclick="window.location.href='{% url 'Main:pthProjects' %}'" class="text-overlay skills-button" style="margin-bottom: 130px; margin-left:450px"> My projects </button>
+            </div>
+       </div>
+       <div class = "skills-item" style="margin-right: 60px">
+           <div>
+               <div class="image-container" style="background-image: url('{% static "assets/AzureIcon.png" %}'); height: 100px; width: 260px;"></div>
+               <div class="image-container" style="background-image: url('{% static "assets/postgresIcon.png" %}'); margin-left: -40px ; height: 100px; width: 260px;"></div>
+               <div class="image-container" style="background-image: url('{% static "assets/msqlmsIcon.png" %}'); height: 100px; width: 260px;"></div>
+               <h1 class="text-overlay" style="color: white; margin-bottom: 400px; margin-left:380px; font-weight: bold"> Data structures </h1>
+               <h1 class="text-overlay" style="color: white; font-size: 18px; margin-bottom: 150px; margin-left:380px"> Able to work with databases using tools <br>such as Azure Data Studio and Microsoft <br>SQL Server Management Studio.
+                   Familiar <br> with the basic syntax of SQL languages, <br>including MySQL and PostgresSQL.
+                   Used <br>PostgresSQL for hosting a database on <br>Heroku during academic projects.
+                   <br>Understand the principles of relational <br>database design, table creation, writing <br> queries, and integrating databases with the <br> back-end of an application.
+               </h1>
+               <button onclick="window.location.href='{% url 'Main:pthProjects' %}'" class="text-overlay skills-button" style="margin-bottom: 80px; margin-left:450px"> My projects </button>
+            </div>
+       </div>
+    </div>
+
+    <!-- end -->
+    <div style="width: 95%; height: 100%; background-color: rgba(0,0,0,0.18); border-radius: 20px; margin-bottom: 20px; margin-top: 20px; display: flex; flex-direction: row; margin-left: auto; margin-right: auto">
+
+    <h1 style="color: rgba(255,255,255,0.45); margin-left: 20px; margin-top: 40px"> My job profiles <i class="bi bi-arrow-bar-right"></i></h1>
+         <a href="" target="_blank">
+             <div class="image-container animate-icons" style="background-image: url('{% static "assets/djIcon.jpg" %}'); margin-bottom: 0 ; height: 70px; width: 70px; margin-left: 20px; "></div>
+         </a>
+          <a href="" target="_blank">
+             <div class="image-container animate-icons" style="background-image: url('{% static "assets/ruaIcon.png" %}'); margin-bottom: 0 ; height: 70px; width: 70px; margin-left: 20px; "></div>
+         </a>
+    </div>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

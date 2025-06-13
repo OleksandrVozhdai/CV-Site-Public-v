@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/homePageStyles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/starsStyle.css' %}" rel="stylesheet" />
+
+    <!-- Boostrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Python Projects</title>
+</head>
+<body>
+    <!-- Portfolio&roadmap Block -->
+<div class="roadmap-container" style="display: flex; flex-direction: column; border-radius: 0; background-color: transparent; margin-top: 40px; height: 2100px">
+    <div class="stars" style="height: 1.5px; width: 1.5px"> </div>
+
+    <div style="flex-direction: row; display: flex; margin-right: auto; margin-left: auto">
+
+        <h1 onclick="window.location.href='{% url 'Main:Home' %}'" class="bloom-text-orange animate-icons" style="margin-left: auto; margin-right: 80px; font-size: 40px; color: orange; margin-top: 60px; cursor: pointer; font-style: italic;">Home></h1>
+
+        <h1 style="margin-left: 20px; margin-right: auto; font-size: 100px; color: white">My</h1>
+        <h1 class="bloom-text-orange-animated" style=" margin-right: auto; font-size: 100px; margin-left: 20px;">Projects </h1>
+    </div>
+
+    <div>
+        <div style="display: flex; flex-direction: row">
+            <div class="image-container animate-icons " style="margin-top: 100px; background-image: url('{% static "assets/pythonIcon.png" %}'); height: 160px; width: 260px;"></div>
+            <div class="image-container animate-icons " style="margin-top: 100px; background-image: url('{% static "assets/htmlIcon.png" %}'); height: 160px; width: 260px;"></div>
+            <div class="image-container animate-icons " style="margin-top: 100px; background-image: url('{% static "assets/cssIcon.png" %}'); height: 160px; width: 260px;"></div>
+            <div class="image-container animate-icons " style="margin-top: 100px; background-image: url('{% static "assets/djangoIcon.png" %}'); height: 160px; width: 260px;"></div>
+            <div class="image-container animate-icons " style="margin-top: 100px; background-image: url('{% static "assets/jsIcon.png" %}'); height: 160px; width: 260px;"></div>
+        </div>
+        <div id="projects-container" >
+
+            <div style="display: flex; flex-direction: row">
+                <div class = "project-box" style="height: 560px; margin-top:50px;margin-left: 25px; flex-direction: column; display: flex">
+                    <h1 style ="color: white; margin-left: 35px; font-size: 35px; margin-top: 20px; font-weight: bold" > Online Shop </h1>
+                   <h1 style ="color: white; margin-left: 35px; font-size: 25px; margin-top: 20px" > This website was developed as part of a CI/CD course. It represents an online electronics store with user registration, a connected PostgreSQL database, and a fully functional product catalog. The project was <br> built using Django.</h1>
+                    <a href="https://github.com/OleksandrVozhdai/OnlineShop-Django" target="_blank">
+                        <div class="image-container animate-icons" style="background-image: url('{% static "assets/githubIcon.png" %}'); margin-bottom: 20px ; height: 150px; width: 150px; margin-left: 110px; ;"></div>
+                    </a>
+                </div>
+            <div style="flex-direction: column; display: flex">
+                <div class="image-container animate-icons" style="background-image: url('{% static "assets/Projects/shopOne.png" %}'); margin-top:10px ; margin-left: 40px; height: 350px; width: 600px;"></div>
+                <div class="image-container animate-icons" style="background-image: url('{% static "assets/Projects/shopTwo.png" %}'); margin-left: 40px; height: 350px; width: 600px;"></div>
+            </div>
+            <div style="flex-direction: column; display: flex">
+                <div class="image-container animate-icons" style="background-image: url('{% static "assets/Projects/shopThree.png" %}'); margin-left: -40px; height: 200px; width: 600px;"></div>
+                <div class="image-container animate-icons" style="background-image: url('{% static "assets/Projects/shopFive.png" %}'); margin-left: -40px; height: 200px; width: 600px;"></div>
+            <div class="image-container animate-icons" style="background-image: url('{% static "assets/Projects/shopSix.png" %}'); margin-left: -40px; height: 200px; width: 600px;"></div>
+            </div>
+        </div>
+         <div class="stars" style="height: 1.5px; width: 1.5px"> </div>
+                <hr><hr><hr><hr>
+                 <div class="stars" style="height: 1.5px; width: 1.5px"> </div>
+                    <div style="display: flex; flex-direction: row">
+                        <div class = "project-box" style="height: 560px; margin-top:50px;margin-left: 25px; flex-direction: column; display: flex">
+                            <h1 style ="color: white; margin-left: 35px; font-size: 35px; margin-top: 20px; font-weight: bold" >CV site (this)</h1>
+                           <h1 style ="color: white; margin-left: 35px; font-size: 25px; margin-top: 20px" > This CV website was developed using Django, Python, HTML, CSS, and JavaScript. It serves as a personal portfolio platform, showcasing my projects and highlighting my academic background and interests in software development. </h1>
+                            <a href="https://github.com/OleksandrVozhdai/CVSite-Django" target="_blank">
+                                <div class="image-container animate-icons" style="background-image: url('{% static "assets/githubIcon.png" %}'); margin-bottom: 20px ; height: 150px; width: 150px; margin-left: 110px; "></div>
+                            </a>
+                        </div>
+                    <div class="image-container animate-icons" style="background-image: url('{% static "assets/Projects/cvSiteOne.png" %}'); margin-top: -70px; margin-left: 200px; height: 800px; width: 800px;"></div>
+         </div>
+
+
+    </div>
+<div style="width: 80%; height: 430px; background-color: rgba(0,0,0,0.18); border-radius: 20px; margin-bottom: 20px; display: flex; flex-direction: row;">
+
+<h1 style="color: rgba(255,255,255,0.45); margin-left: 20px; margin-top: 40px"> My job profiles <i class="bi bi-arrow-bar-right"></i></h1>
+     <a href="" target="_blank">
+         <div class="image-container animate-icons" style="background-image: url('{% static "assets/djIcon.jpg" %}'); margin-bottom: 0 ; height: 70px; width: 70px; margin-left: 20px; "></div>
+     </a>
+      <a href="" target="_blank">
+         <div class="image-container animate-icons" style="background-image: url('{% static "assets/ruaIcon.png" %}'); margin-bottom: 0 ; height: 70px; width: 70px; margin-left: 20px; "></div>
+     </a>
+</div>
+</div>
+
+
+</body>
+</html>

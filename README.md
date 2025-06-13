@@ -1,2 +1,2 @@
-# CV-Site-Public-v
-
+# CVSite-Django
+My cv

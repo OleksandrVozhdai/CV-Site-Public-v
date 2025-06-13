@@ -1,0 +1,408 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f) fixed;
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE 10+ */
+    overflow-y: scroll;             /* Завжди прокрутка без скролбару */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0px;                     /* Chrome, Safari */
+    background: transparent;
+}
+
+
+
+.control-button{
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    font-size: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 70%;
+    width: 50%;
+    border-radius: 40px;
+    font-family: Lufga, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.control-button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+}
+
+/* One button that always selected */
+.control-button-selected{
+    background-color: #FD853A;
+    border-color: transparent;
+    color: white;
+    font-size: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 70%;
+    width: 50%;
+    border-radius: 40px;
+    font-family: Lufga, sans-serif;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.control-button-selected:hover{
+    background-color: #ff6600;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.control-panel {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    z-index: 4;
+
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    display: flex;
+    gap: 20px;
+}
+
+.skills-container{
+    background-image: url('../assets/skillsBackground.png');
+    border-radius: 70px;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    width: 98%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE 10+ */
+}
+
+.skills-container::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
+}
+
+.skills-item{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 25%;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE 10+ */
+}
+
+.skills-item::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
+}
+
+.skills-item:hover{
+     background-color: rgba(100, 100, 100, 0.1);
+     width: 50%;
+     height: 93%;
+     backdrop-filter: blur(15px);
+}
+
+.bloom-text-orange{
+    color: orange;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.7),
+               0 0 20px rgba(255, 165, 0, 0.5),
+               0 0 40px rgba(255, 165, 0, 0.3);
+}
+
+.bloom-text-yellow{
+    color: rgba(255, 215, 0, 1);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7),
+               0 0 20px rgba(255, 215, 0, 0.5),
+               0 0 40px rgba(255, 215, 0, 0.3);
+}
+
+.image-container {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 260px;
+    width: 260px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-left: 50px;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: black;
+  font-size: 24px;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.skills-button{
+    color: white;
+    background-color: rgba(255, 105, 0, 0.2);
+    border-radius: 10px;
+    width: 30%;
+    text-decoration: none;
+    height: 10%;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.skills-button:hover {
+    background-color: rgba(255, 105, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.roadmap-container{
+    background-color: #191c31;
+    border-color: black;
+    border-radius: 70px;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: auto;
+    width: 98%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE 10+ */
+}
+
+/* For animated text */
+@keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+
+.avatar{
+    background-color: rgba(9, 17, 57, 0.35);
+    border-color: rgba(0, 0, 0, 0.85);;
+    border-width: 10px;
+    border-radius: 100%;
+    display: flex;
+    border-style: solid;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    flex-wrap: nowrap;
+}
+
+.animate-icons{
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.animate-icons:hover{
+    transform: scale(1.1);
+}
+
+@keyframes bloomFlicker {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.7),
+                 0 0 20px rgba(255, 165, 0, 0.5),
+                 0 0 40px rgba(255, 165, 0, 0.3);
+  }
+  50% {
+    opacity: 0.6;
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.3),
+                 0 0 10px rgba(255, 165, 0, 0.2),
+                 0 0 20px rgba(255, 165, 0, 0.1);
+  }
+}
+
+.bloom-text-orange-animated {
+  color: orange;
+  animation: bloomFlicker 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+  font-size: 100px;
+}
+
+.bloom-text-orange-animated:hover {
+  font-size: 120px;
+}
+
+.project-box{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 25%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.project-box:hover{
+   transform: scale(1.1);
+}
+
+.project-box-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 300px;
+  min-height: 150px;
+    overflow: visible;
+}
+
+.image {
+  position: absolute;
+  height: 250px;
+  width: 260px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.image-1 {
+  background-image: url('../assets/vsIcon.png');
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.image-2 {
+  background-image: url('../assets/vsCodeIcon.png');
+  top: 60px;
+  left: 40px;
+  z-index: 2;
+}
+
+.image-3 {
+  background-image: url('../assets/pyCharmIcon.png');
+  height: 150px;width: 150px;
+  top: 170px;
+  left: 10px;
+  z-index: 3;
+}
+
+.image-4 {
+  background-image: url('../assets/dockerIcon.png');
+  height: 150px;width: 150px;
+  top: 0px;
+  left: 10px;
+  z-index: 3;
+}
+
+.image-5 {
+  background-image: url('../assets/githubIcon.png');
+  height: 150px;width: 150px;
+  top: 120px;
+  left: 120px;
+  z-index: 3;
+}
+
+.image-6 {
+  background-image: url('../assets/gitBashIcon.png');
+  height: 150px;width: 150px;
+  top: 170px;
+  left: -20px;
+  z-index: 3;
+}
+
+.image-7 {
+  background-image: url('../assets/AzureIcon.png');
+  top: 0;
+  height: 240px;
+    width: 220px;
+  left: 0;
+  z-index: 1;
+}
+
+
+.image-8 {
+  background-image: url('../assets/msqlmsIcon.png');
+  top: 150px;
+  height: 180px;
+  left: 40px;
+  z-index: 2;
+}
+
+.image-9 {
+  background-image: url('../assets/herokuIcon.png');
+  top: 0;
+  height: 260px;
+  left: 0;
+  z-index: 2;
+}
+
+.image-10 {
+  background-image: url('../assets/cppIcon.png');
+  height: 150px;width: 150px;
+  top: 0px;
+  left: 10px;
+  z-index: 3;
+}
+
+.image-11 {
+  background-image: url('../assets/juceIcon.png');
+  height: 150px;width: 150px;
+  top: 120px;
+  left: 120px;
+  z-index: 3;
+}
+
+.image-12 {
+  background-image: url('../assets/sfmlIcon.png');
+  height: 150px;width: 150px;
+  top: 170px;
+  left: -20px;
+  z-index: 3;
+}
+
+.image-13 {
+  background-image: url('../assets/uaIcon.png');
+  height: 150px;width: 200px;
+  top: 0px;
+  left: 10px;
+  z-index: 3;
+}
+
+.image-14 {
+  background-image: url('../assets/enIcon.png');
+  height: 150px;width: 150px;
+  top: 120px;
+  left: 120px;
+  z-index: 3;
+}
+
+.image-15 {
+  background-image: url('../assets/plIcon.png');
+  height: 150px;width: 200px;
+  top: 170px;
+  left: -20px;
+  z-index: 3;
+}
